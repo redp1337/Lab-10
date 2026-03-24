@@ -32,9 +32,16 @@ class PerishableProductProperties extends ProductProperties{
     }
 
     toString(){
-        return `Product: ${this.name}, Price: ${this.price.toFixed(2)}, Quantity${this.quantity}, Expiration Date: ${this.expirationDate}`;
+        return `Product: ${this.name}, Price: ${this.price.toFixed(2)}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
     }
 }
 
+// two instances of class PerishableProductProperties
+const product2= new PerishableProductProperties("milk", 1.50, 10, "2026-11-01");
+console.log(product2.getTotalValue());
+console.log(product2.toString());
 
+const product3= new PerishableProductProperties("cheese", 5.50, 50, "2026-12-11");
+console.log(product3.getTotalValue());
+console.log(product3.toString());
 
