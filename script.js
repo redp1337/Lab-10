@@ -6,4 +6,8 @@ class ProductProperties{
         this.price=price;
         this.quantity=quantity;
     }
+    getTotalValue(){
+        // this returns the total value of product in stock
+        return this.price*this.quantity;
+    }
 }
