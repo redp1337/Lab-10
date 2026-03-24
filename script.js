@@ -11,7 +11,7 @@ class ProductProperties{
         // returns the total value of product in stock
         return this.price*this.quantity;
     }
-    
+
     toString(){
         // returns string representation of the product
         // price must be rounded to two decimal places
@@ -20,3 +20,6 @@ class ProductProperties{
     }
 }
 
+const product1= new ProductProperties("apple", 2.50, 50);
+console.log(product1.getTotalValue());
+console.log(product1.toString());
