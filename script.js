@@ -67,6 +67,14 @@ class Store{
         }
         return total;
     }
+    findProductByName(name){
+        for(const product of this.inventory){
+            if (product.name===name){
+                return product;
+            }
+        }
+        return null;
+    }
 }
 const inventory = [
     new ProductProperties("wrench", 7.25, 20),
