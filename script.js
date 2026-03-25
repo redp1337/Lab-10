@@ -91,3 +91,7 @@ const store= new Store();
 //adding products from inventory to store
 inventory.forEach(product=>store.addProduct(product));
 
+
+//total value before discount is added to inventory
+console.log("here is the total transaction value before the discount is applied:$ ",
+store.getInventoryValue().toFixed(2));
