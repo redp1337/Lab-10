@@ -102,3 +102,12 @@ console.log(ProductProperties.applyDiscount(store.inventory, 0.15));
 //total value after the discount is added
 console.log("here is the total value after the 15% discount is applied: $", store.getInventoryValue().toFixed(2));
 
+//find product by name
+const specificProduct= store.findProductByName("mango");
+
+if (specificProduct){
+    console.log("Product found in inventory.");
+    console.log(specificProduct.toString());
+} else {
+    console.log("Product not found in inventory.")
+}
