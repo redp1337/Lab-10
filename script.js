@@ -87,3 +87,6 @@ const inventory = [
 ];
 
 const store= new Store();
+
+//adding products from inventory to store
+inventory.forEach(product=>store.addProduct(product));
