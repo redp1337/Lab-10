@@ -20,7 +20,7 @@ class ProductProperties{
     }
     static applyDiscount(products,discount){
         products.forEach(product=>{
-            product.price=product.price - (1-discount);
+            product.price=+(product.price - (product.price*discount)).toFixed(2);
         });
     }
 }
@@ -90,3 +90,4 @@ const store= new Store();
 
 //adding products from inventory to store
 inventory.forEach(product=>store.addProduct(product));
+
