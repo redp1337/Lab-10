@@ -18,6 +18,11 @@ class ProductProperties{
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`
 
     }
+    static applyDiscount(products,discount){
+        products.forEach(product=>{
+            product.price=price - (price*discount);
+        });
+    }
 }
 
 const product1= new ProductProperties("apple", 2.50, 50);
@@ -44,4 +49,7 @@ console.log(product2.toString());
 const product3= new PerishableProductProperties("cheese", 5.50, 50, "2026-12-11");
 console.log(product3.getTotalValue());
 console.log(product3.toString());
+
+//Part 3: Static methods and properties above in class ProductProperties
+
 
