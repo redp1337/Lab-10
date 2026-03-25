@@ -76,11 +76,14 @@ class Store{
         return null;
     }
 }
+
+//Part 5: Testing the system
 const inventory = [
-    new ProductProperties("wrench", 7.25, 20),
-    new ProductProperties("hammer", 5.00, 10),
+    new ProductProperties("tv", 300.00, 20),
+    new ProductProperties("computer", 1000.00, 10),
     new PerishableProductProperties("mango",2.00,100, "2026-04-01"),
     new PerishableProductProperties("yogurt",4.00,50, "2026-05-01"),
     new PerishableProductProperties("watermelon",10.00,50, "2026-05-11"),
 ];
 
+const store= new Store();
