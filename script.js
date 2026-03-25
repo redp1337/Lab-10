@@ -20,7 +20,7 @@ class ProductProperties{
     }
     static applyDiscount(products,discount){
         products.forEach(product=>{
-            product.price=price - (price*discount);
+            product.price=product.price - (1-discount);
         });
     }
 }
@@ -37,7 +37,7 @@ class PerishableProductProperties extends ProductProperties{
     }
 
     toString(){
-        return `Product: ${this.name}, Price: ${this.price.toFixed(2)}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
+        return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
     }
 }
 
@@ -52,4 +52,20 @@ console.log(product3.toString());
 
 //Part 3: Static methods and properties above in class ProductProperties
 
+//Part 4: Store management
+class Store{
+    constructor(){
+        this.inventory=[];
+    }
+    addProduct(product){
+        this.inventory.push(product);
+    }
+}
+const inventory = [
+    new ProductProperties("wrench", 7.25, 20),
+    new ProductProperties("hammer", 5.00, 10),
+    new PerishableProductProperties("mango",2.00,100, "2026-04-01"),
+    new PerishableProductProperties("yogurt",4.00,50, "2026-05-01"),
+    new PerishableProductProperties("watermelon",10.00,50, "2026-05-11"),
+];
 
