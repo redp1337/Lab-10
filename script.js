@@ -60,6 +60,13 @@ class Store{
     addProduct(product){
         this.inventory.push(product);
     }
+    getInventoryValue(){
+        let total=0;
+        for (const product of this.inventory){
+            total+= product.getTotalValue();
+        }
+        return total;
+    }
 }
 const inventory = [
     new ProductProperties("wrench", 7.25, 20),
